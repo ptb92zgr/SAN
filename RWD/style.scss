@@ -1,0 +1,101 @@
+$primaryFontColor: rgb(10, 36, 62);
+$secondaryFontColor: rgb(205, 237, 255);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Arial", cursive, sans-serif;
+  font-size: 1.6rem;
+  background-image: url("https://wallpaperaccess.com/full/141254.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__txt {
+    font-size: 35px;
+    color: $primaryFontColor;
+    font-family: 'Solitreo', cursive;
+  }
+}
+
+.nav {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+display: none;
+
+  &__items {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+  }
+  &__item {
+    padding: 10px 20px;
+    color: $primaryFontColor;
+    transition: color 0.2s;
+  }
+}
+
+.nav__item:hover {
+  color: $secondaryFontColor;
+}
+
+@media (min-width: 360px){
+    .header__txt{
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 576px){
+    .header__txt{
+        font-size: 50px;
+    }
+    .nav{
+        display: block;
+
+        &__item{
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 769px){
+    .header__txt{
+        font-size: 100px;
+    }
+    .nav{
+        display: block;
+
+        &__item{
+            font-size: 24px;
+        }
+    }
+}
