@@ -63,6 +63,59 @@ body {
   color: rgb(205, 237, 255);
 }
 
+.wrapper {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: rgb(10, 36, 62);
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 50px 10px;
+}
+.card__header {
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+.card__img {
+  border-radius: 10px;
+  box-shadow: 0px 0px 36px -1px rgb(66, 68, 90);
+}
+.card__description {
+  text-align: center;
+  margin: 30px;
+}
+.card__btn {
+  padding: 10px 30px;
+  border: 2px solid white;
+  background: none;
+  border-radius: 10px;
+  box-shadow: 0;
+  text-transform: uppercase;
+  color: rgb(10, 36, 62);
+  transition: box-shadow 0.2s;
+}
+
+.card__btn:hover {
+  box-shadow: inset 0px 0px 36px -1px rgb(66, 68, 90);
+  color: white;
+}
+
 @media (min-width: 360px) {
   .header__txt {
     font-size: 45px;

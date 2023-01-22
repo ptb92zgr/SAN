@@ -36,7 +36,7 @@ body {
   &__txt {
     font-size: 35px;
     color: $primaryFontColor;
-    font-family: 'Solitreo', cursive;
+    font-family: "Solitreo", cursive;
   }
 }
 
@@ -50,7 +50,7 @@ body {
   position: fixed;
   top: 0;
   width: 100vw;
-display: none;
+  display: none;
 
   &__items {
     display: flex;
@@ -68,34 +68,95 @@ display: none;
   color: $secondaryFontColor;
 }
 
-@media (min-width: 360px){
-    .header__txt{
-        font-size: 45px;
-    }
+.wrapper {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: $primaryFontColor;
 }
 
-@media (min-width: 576px){
-    .header__txt{
-        font-size: 50px;
-    }
-    .nav{
-        display: block;
+.card {
+  width: 300px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 50px 10px;
 
-        &__item{
-            font-size: 18px;
-        }
-    }
+  &__header {
+    margin: 30px 0;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 36px -1px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 36px -1px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 36px -1px rgba(66, 68, 90, 1);
+  }
+
+  &__description {
+    text-align: center;
+    margin: 30px;
+  }
+
+  &__btn {
+    padding: 10px 30px;
+    border: 2px solid white;
+    background: none;
+    border-radius: 10px;
+    box-shadow: 0;
+    text-transform: uppercase;
+    color: $primaryFontColor;
+    transition: box-shadow 0.2s;
+  }
 }
 
-@media (min-width: 769px){
-    .header__txt{
-        font-size: 100px;
-    }
-    .nav{
-        display: block;
+.card__btn:hover {
+  -webkit-box-shadow: inset 0px 0px 36px -1px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 0px 36px -1px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 0px 36px -1px rgba(66, 68, 90, 1);
+  color: white;
+}
 
-        &__item{
-            font-size: 24px;
-        }
+@media (min-width: 360px) {
+  .header__txt {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 576px) {
+  .header__txt {
+    font-size: 50px;
+  }
+  .nav {
+    display: block;
+
+    &__item {
+      font-size: 18px;
     }
+  }
+}
+
+@media (min-width: 769px) {
+  .header__txt {
+    font-size: 100px;
+  }
+  .nav {
+    display: block;
+
+    &__item {
+      font-size: 24px;
+    }
+  }
 }
